@@ -267,7 +267,7 @@ curl -X POST http://localhost:8000/api/v1/qa/ask \
 
 ## Screenshots
 
-> _Add screenshots of the Streamlit upload sidebar, Q&A interface, and citation cards here._
+![alt text](image.png)
 
 ---
 
