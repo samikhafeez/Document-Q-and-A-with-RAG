@@ -1,0 +1,13 @@
+Model,Release,Context Window,Key Strengths,Typical Use Cases
+GPT-4o,May 2024,128 000 tokens,"Multimodal (text+image+audio); fastest GPT-4 class; low cost","Chatbots, document analysis, vision tasks, real-time apps"
+GPT-4o mini,July 2024,128 000 tokens,"Cheap and fast; strong reasoning for its cost; 16k output tokens","High-volume classification, summarisation, RAG retrieval grounding"
+GPT-4 Turbo,November 2023,128 000 tokens,"Very high reasoning quality; JSON mode; function calling","Complex analysis, code generation, legal/medical drafting"
+GPT-3.5 Turbo,March 2023,16 385 tokens,"Fast and low cost; good instruction following","Simple Q&A, rewriting, low-latency chat"
+o1,September 2024,200 000 tokens,"Chain-of-thought reasoning; best at math and coding benchmarks","Hard reasoning tasks, PhD-level science, adversarial prompts"
+o1-mini,September 2024,128 000 tokens,"Cheaper o1 variant; strong STEM reasoning; lower latency than o1","Coding assistance, math tutoring, logic puzzles"
+text-embedding-3-small,January 2024,8 191 tokens,"1 536-dimension embeddings; 5× cheaper than ada-002","Semantic search, RAG indexing, clustering"
+text-embedding-3-large,January 2024,8 191 tokens,"3 072-dimension embeddings; MTEB state-of-the-art at launch","High-precision retrieval, long-context semantic search"
+text-embedding-ada-002,December 2022,8 191 tokens,"Legacy embedding model; 1 536 dimensions","Backward-compatible workloads (prefer v3 for new projects)"
+DALL-E 3,October 2023,N/A,"Photorealistic and artistic image generation; prompt adherence","Marketing visuals, concept art, data augmentation"
+Whisper (large-v2),September 2022,N/A,"Open-source speech-to-text; 97 languages; low word error rate","Transcription, subtitles, voice input"
+TTS-1,May 2024,N/A,"Text-to-speech; 6 voices; low latency","Voice assistants, audio content, accessibility"

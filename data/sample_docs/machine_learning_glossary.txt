@@ -1,0 +1,102 @@
+Machine Learning Glossary
+=========================
+
+A reference guide to key terms in machine learning, deep learning, and AI.
+
+---
+
+ACCURACY
+The fraction of predictions a model gets right. Accuracy = (TP + TN) / (TP + TN + FP + FN). It is an unreliable metric for imbalanced datasets where one class dominates.
+
+ATTENTION MECHANISM
+A neural network component that allows the model to focus on different parts of the input when generating each output token. The Transformer architecture (Vaswani et al., 2017) replaced recurrence entirely with self-attention.
+
+BACKPROPAGATION
+The algorithm for computing gradients of a loss function with respect to model weights by applying the chain rule of calculus. Gradients flow backward from the output layer to the input layer.
+
+BATCH NORMALISATION
+A technique that normalises layer inputs across the mini-batch to stabilise training and allow higher learning rates. Introduced by Ioffe and Szegedy (2015).
+
+BIAS-VARIANCE TRADEOFF
+The tension between model underfitting (high bias, too simple) and overfitting (high variance, memorises training data). Regularisation, more data, and ensemble methods help manage this tradeoff.
+
+CROSS-ENTROPY LOSS
+A common loss function for classification tasks. For binary classification: L = -[y log(p) + (1-y) log(1-p)]. For multiclass: L = -sum(y_i * log(p_i)).
+
+CROSS-VALIDATION
+A resampling method for estimating model generalisation. K-fold CV splits data into k folds; the model trains on k-1 folds and validates on the held-out fold, rotating k times. For time-series: walk-forward (time-ordered) splits must be used.
+
+DROPOUT
+A regularisation technique that randomly zeroes out a fraction of neurons during each forward pass at training time, preventing co-adaptation (Srivastava et al., 2014).
+
+EMBEDDING
+A dense, low-dimensional representation of high-dimensional data (text tokens, categorical values, etc.) learned during training. Embeddings encode semantic relationships: similar concepts have similar vectors.
+
+ENSEMBLE METHOD
+A technique combining multiple base models to produce stronger predictions. Types include: bagging (Bootstrap Aggregating, e.g., Random Forest), boosting (sequential correction, e.g., XGBoost, AdaBoost), and stacking.
+
+F1 SCORE
+The harmonic mean of precision and recall: F1 = 2 * (precision * recall) / (precision + recall). Balances the two metrics and is preferred for imbalanced datasets.
+
+FEATURE ENGINEERING
+The process of using domain knowledge to create new input features from raw data, often the highest-leverage step in classical ML pipelines. Examples: moving averages, log-transformations, interaction terms.
+
+FINE-TUNING
+Continuing training of a pre-trained model on a new task-specific dataset, updating some or all of its weights. Fine-tuning is more data-efficient than training from scratch.
+
+GRADIENT DESCENT
+An optimisation algorithm that iteratively moves model parameters in the direction of the negative gradient of the loss. Variants include SGD (stochastic), Mini-Batch GD, Adam, and AdamW.
+
+HYPERPARAMETER
+A configuration value set before training (e.g., learning rate, number of trees, chunk size) as opposed to parameters learned from data. Hyperparameter search includes grid search, random search, and Bayesian optimisation.
+
+LARGE LANGUAGE MODEL (LLM)
+A neural language model trained on vast text corpora using self-supervised learning, typically based on the Transformer architecture. Examples: GPT-4, Claude, Gemini. LLMs are capable of in-context learning, reasoning, and code generation.
+
+LEARNING RATE
+The step size used to update model weights during gradient descent. Too large causes divergence; too small causes slow convergence. Learning rate schedulers (e.g., cosine annealing, ReduceLROnPlateau) adapt the rate during training.
+
+LOGISTIC REGRESSION
+A linear model for binary classification that outputs probabilities via the sigmoid function. Despite its name, logistic regression is a classification algorithm, not regression.
+
+LONG SHORT-TERM MEMORY (LSTM)
+A recurrent neural network variant designed to capture long-range dependencies in sequential data. LSTM cells use input, forget, and output gates to control information flow, mitigating the vanishing gradient problem.
+
+OVERFITTING
+When a model learns the training data too well, including its noise, and performs poorly on unseen data. Signs include a large gap between training and validation metrics.
+
+PRECISION
+The fraction of positive predictions that are truly positive: Precision = TP / (TP + FP). High precision means few false alarms.
+
+RANDOM FOREST
+An ensemble of decision trees trained on bootstrap samples with random feature subsets at each split (bagging). Averaging predictions across trees reduces variance.
+
+RECALL (SENSITIVITY)
+The fraction of actual positives correctly identified: Recall = TP / (TP + FN). High recall means few missed positives.
+
+REGULARISATION
+Techniques to prevent overfitting by penalising model complexity. L1 (Lasso) encourages sparsity; L2 (Ridge) penalises large weights; Dropout zeroes random neurons.
+
+ROC-AUC
+The area under the Receiver Operating Characteristic curve. Measures the model's ability to discriminate between classes across all classification thresholds. AUC = 0.5 is random; AUC = 1.0 is perfect.
+
+SOFTMAX
+A function that converts a vector of raw scores (logits) into a probability distribution over classes. Softmax(z_i) = exp(z_i) / sum(exp(z_j)).
+
+TRANSFER LEARNING
+Using a model pre-trained on one task as the starting point for a different but related task. The pre-trained weights encode general features that can be adapted with small labelled datasets.
+
+TRANSFORMER
+A neural architecture based entirely on self-attention (no convolutions or recurrence). Introduced by Vaswani et al. (2017) in "Attention Is All You Need", transformers are the backbone of modern LLMs.
+
+UNDERFITTING
+When a model is too simple to capture the underlying patterns in the data. Signs include poor training performance and high bias.
+
+VECTOR DATABASE
+A specialised database optimised for storing and querying high-dimensional embedding vectors using approximate nearest-neighbour (ANN) algorithms such as HNSW or IVF. Examples: FAISS, Pinecone, Chroma, Weaviate, Qdrant.
+
+XGBOOST
+An optimised gradient boosting library that builds an ensemble of shallow decision trees sequentially, where each tree corrects the residuals of the previous. Known for speed, performance, and built-in regularisation.
+
+ZERO-SHOT LEARNING
+The ability of a model to perform a task it was not explicitly trained on, relying instead on its general knowledge. For example, an LLM correctly classifying sentiment without seeing labelled examples.
